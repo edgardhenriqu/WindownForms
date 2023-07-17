@@ -24,6 +24,12 @@ namespace CursoWindowsForms
         public Frm_Principal_Menu_UC()
         {
             InitializeComponent();
+
+            novoToolStripMenuItem.Enabled = false;
+            apagarAbaToolStripMenuItem.Enabled = false;
+            abrirImagemToolStripMenuItem.Enabled = false;
+            desconectarToolStripMenuItem.Enabled = false;
+
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +144,45 @@ namespace CursoWindowsForms
                 TB.Controls.Add(U);
                 Tbc_Aplicacoes.TabPages.Add(TB);
             }
+        }
+
+        private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Login F = new Frm_Login();
+            F.ShowDialog();
+
+            if (F.DialogResult == DialogResult.OK)
+            {
+
+                string senha = F.senha;
+                string login = F.login;
+
+                if (CursoWindowsFormsBiblioteca.Cls_Uteis.validaSenhaLogin(senha) == true)
+                {
+                    novoToolStripMenuItem.Enabled = true;
+                    apagarAbaToolStripMenuItem.Enabled = true;
+                    abrirImagemToolStripMenuItem.Enabled = true;
+                    conectarToolStripMenuItem.Enabled = false;
+                    desconectarToolStripMenuItem.Enabled = true;
+
+                    MessageBox.Show("Bem vindo " + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Senha Invalida " + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            novoToolStripMenuItem.Enabled = false;
+            apagarAbaToolStripMenuItem.Enabled = false;
+            abrirImagemToolStripMenuItem.Enabled = false;
+            conectarToolStripMenuItem.Enabled = true;
+            desconectarToolStripMenuItem.Enabled = false;
+
         }
     }
 }
