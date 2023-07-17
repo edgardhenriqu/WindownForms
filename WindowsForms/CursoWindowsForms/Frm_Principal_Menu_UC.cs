@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursoWindowsFormsBiblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -177,12 +178,26 @@ namespace CursoWindowsForms
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            novoToolStripMenuItem.Enabled = false;
-            apagarAbaToolStripMenuItem.Enabled = false;
-            abrirImagemToolStripMenuItem.Enabled = false;
-            conectarToolStripMenuItem.Enabled = true;
-            desconectarToolStripMenuItem.Enabled = false;
 
+            Frm_Questao Db = new Frm_Questao("light_bulb1", "Você deseja se desconectar ?");
+            Db.ShowDialog();
+
+            if (Db.DialogResult == DialogResult.Yes)
+            {
+
+                //Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+
+                for (int i= Tbc_Aplicacoes.TabPages.Count -1; i>= 0; i+=-1)
+                {
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+                }
+
+                novoToolStripMenuItem.Enabled = false;
+                apagarAbaToolStripMenuItem.Enabled = false;
+                abrirImagemToolStripMenuItem.Enabled = false;
+                conectarToolStripMenuItem.Enabled = true;
+                desconectarToolStripMenuItem.Enabled = false;
+            }
         }
     }
 }
