@@ -57,3 +57,6 @@ C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes 
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_Questao.resources
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_ArquivoImagem_UC.resources
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_Login.resources
+C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_MouseEventos.resources
+C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_MouseCaptura.resources
+C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Debug\CursoWindowsForms.Frm_MouseCursor.resources

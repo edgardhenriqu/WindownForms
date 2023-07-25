@@ -48,3 +48,4 @@ C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes 
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Release\CursoWindowsForms.csproj.CopyComplete
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Release\CursoWindowsForms.exe
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Release\CursoWindowsForms.pdb
+C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsForms\obj\Release\CursoWindowsForms.Frm_MouseEventos.resources
