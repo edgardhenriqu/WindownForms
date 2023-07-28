@@ -21,7 +21,15 @@ namespace CursoWindowsForms
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                MessageBox.Show("Cliquei com o botão da direta do mouse");
+                var PositionX = e.X;
+                var PositionY = e.Y;
+                //MessageBox.Show("Posição do mouse: (" + PositionX.ToString() + "," + PositionY.ToString() + ")");
+
+                var ContextMenu = new ContextMenuStrip();
+                var vToolTip001 = new ToolStripMenuItem();
+                vToolTip001.Text = "Item do menu 1";
+                ContextMenu.Items.Add(vToolTip001.Text);
+                ContextMenu.Show(this,new Point(PositionX,PositionY));
             }
         }
     }
