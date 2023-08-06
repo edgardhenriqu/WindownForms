@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +17,7 @@ namespace CursoWindowsForms
             InitializeComponent();
             Lbl_ArquivoImagem.Text = nomeArquivoImagem;
             Pic_ArquivoImagem.Image = Image.FromFile(nomeArquivoImagem);
+
         }
 
         private void Btn_Cor_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace CursoWindowsForms
             {
                 Lbl_ArquivoImagem.Font = FDb.Font;
             }
+
         }
     }
 }

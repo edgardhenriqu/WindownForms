@@ -1,5 +1,4 @@
-﻿using CursoWindowsFormsBiblioteca;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -126,13 +125,15 @@ namespace CursoWindowsForms
 
         private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog Db = new OpenFileDialog();
-            Db.InitialDirectory = "C:\\Users\\edgard\\Documents\\C# ALURA\\05- Windown Forms. Formulários, componentes e eventos\\WindowsForms\\CursoWindowsForms\\Imagens";
+            Db.InitialDirectory = "C:\\WindowsForms\\Curso\\CursoWindowsForms\\CursoWindowsForms\\Imagens";
             Db.Filter = "PNG|*.PNG";
             Db.Title = "Escolha a Imagem";
 
-            if (Db.ShowDialog() == DialogResult.OK)
+            if(Db.ShowDialog() == DialogResult.OK)
             {
+
                 string nomeArquivoImagem = Db.FileName;
 
                 ControleArquivoImagem += 1;
@@ -145,6 +146,8 @@ namespace CursoWindowsForms
                 TB.Controls.Add(U);
                 Tbc_Aplicacoes.TabPages.Add(TB);
             }
+
+           
         }
 
         private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,24 +173,25 @@ namespace CursoWindowsForms
                 }
                 else
                 {
-                    MessageBox.Show("Senha Invalida " + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Senha inválida !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+              
             }
 
         }
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Frm_Questao Db = new Frm_Questao("light_bulb1", "Você deseja se desconectar ?");
+            Frm_Questao Db = new Frm_Questao("icons8_question_mark_961", "Você deseja se desconectar ?");
             Db.ShowDialog();
+            //if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 
             if (Db.DialogResult == DialogResult.Yes)
             {
 
                 //Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
 
-                for (int i= Tbc_Aplicacoes.TabPages.Count -1; i>= 0; i+=-1)
+                for (int i= Tbc_Aplicacoes.TabPages.Count - 1; i >= 0; i+=-1)
                 {
                     Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
                 }
@@ -197,6 +201,88 @@ namespace CursoWindowsForms
                 abrirImagemToolStripMenuItem.Enabled = false;
                 conectarToolStripMenuItem.Enabled = true;
                 desconectarToolStripMenuItem.Enabled = false;
+            }
+         
+        }
+
+        private void Tbc_Aplicacoes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                //var PosicaoX = e.X;
+                //var PosicaoY = e.Y;
+                //MessageBox.Show("Clique com o botão da direita do mouse. A posição relativa foi (" + PosicaoX.ToString() + "," + PosicaoY.ToString() + ")");
+
+                var ContextMenu = new ContextMenuStrip();
+                var vToolTip001 = DesenhaItemMenu("Apagar a Aba", "DeleteTab");
+                var vToolTip002 = DesenhaItemMenu("Apagar Todas as Esquerda", "DeleteLeft");
+                var vToolTip003 = DesenhaItemMenu("Apagar Todas as Direita", "DeleteRight");
+                var vToolTip004 = DesenhaItemMenu("Apagar Todas menos Esta", "DeleteAll");
+                ContextMenu.Items.Add(vToolTip001);
+                ContextMenu.Items.Add(vToolTip002);
+                ContextMenu.Items.Add(vToolTip003);
+                ContextMenu.Items.Add(vToolTip004);
+                ContextMenu.Show(this, new Point(e.X, e.Y));
+                vToolTip001.Click += new System.EventHandler(vToolTip001_Click);
+                vToolTip002.Click += new System.EventHandler(vToolTip002_Click);
+                vToolTip003.Click += new System.EventHandler(vToolTip003_Click);
+                vToolTip004.Click += new System.EventHandler(vToolTip004_Click);
+
+            }
+            
+        }
+        void vToolTip001_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+            }
+        }
+        void vToolTip002_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);           
+            }
+        }
+        void vToolTip003_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
+            }
+        }
+        void vToolTip004_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);
+                ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
+            }      
+        }
+        ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+        {
+            var vToolTip = new ToolStripMenuItem();
+            vToolTip.Text = text;
+            Image MyImage = (Image)global::CursoWindowsForms.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            vToolTip.Image = MyImage;
+            return vToolTip;
+        }
+
+        void ApagaDireita(int ItemSelecionado)
+        {
+            for (int i = Tbc_Aplicacoes.TabCount - 1;
+                   i > ItemSelecionado; i += -1)
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+            }
+        }
+
+        void ApagaEsquerda(int ItemSelecionado)
+        {
+            for (int i = ItemSelecionado - 1; i >= 0; i += -1)
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
             }
         }
     }

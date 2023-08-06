@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.Pic_Login = new System.Windows.Forms.PictureBox();
             this.Lbl_Login = new System.Windows.Forms.Label();
-            this.Txt_Login = new System.Windows.Forms.TextBox();
             this.Lbl_Password = new System.Windows.Forms.Label();
-            this.Txt_Password = new System.Windows.Forms.TextBox();
+            this.Txt_Login = new System.Windows.Forms.TextBox();
+            this.Txt_Senha = new System.Windows.Forms.TextBox();
             this.Btn_OK = new System.Windows.Forms.Button();
             this.Btn_Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Login)).BeginInit();
@@ -40,7 +41,7 @@
             // 
             // Pic_Login
             // 
-            this.Pic_Login.Image = global::CursoWindowsForms.Properties.Resources.key;
+            this.Pic_Login.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Login.Image")));
             this.Pic_Login.Location = new System.Drawing.Point(12, 8);
             this.Pic_Login.Name = "Pic_Login";
             this.Pic_Login.Size = new System.Drawing.Size(100, 93);
@@ -57,29 +58,29 @@
             this.Lbl_Login.TabIndex = 1;
             this.Lbl_Login.Text = "label1";
             // 
-            // Txt_Login
-            // 
-            this.Txt_Login.Location = new System.Drawing.Point(122, 33);
-            this.Txt_Login.Name = "Txt_Login";
-            this.Txt_Login.Size = new System.Drawing.Size(151, 20);
-            this.Txt_Login.TabIndex = 2;
-            // 
             // Lbl_Password
             // 
             this.Lbl_Password.AutoSize = true;
             this.Lbl_Password.Location = new System.Drawing.Point(119, 65);
             this.Lbl_Password.Name = "Lbl_Password";
             this.Lbl_Password.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_Password.TabIndex = 3;
+            this.Lbl_Password.TabIndex = 2;
             this.Lbl_Password.Text = "label2";
             // 
-            // Txt_Password
+            // Txt_Login
             // 
-            this.Txt_Password.Location = new System.Drawing.Point(122, 81);
-            this.Txt_Password.Name = "Txt_Password";
-            this.Txt_Password.PasswordChar = '*';
-            this.Txt_Password.Size = new System.Drawing.Size(151, 20);
-            this.Txt_Password.TabIndex = 4;
+            this.Txt_Login.Location = new System.Drawing.Point(122, 33);
+            this.Txt_Login.Name = "Txt_Login";
+            this.Txt_Login.Size = new System.Drawing.Size(151, 20);
+            this.Txt_Login.TabIndex = 3;
+            // 
+            // Txt_Senha
+            // 
+            this.Txt_Senha.Location = new System.Drawing.Point(122, 81);
+            this.Txt_Senha.Name = "Txt_Senha";
+            this.Txt_Senha.PasswordChar = '*';
+            this.Txt_Senha.Size = new System.Drawing.Size(151, 20);
+            this.Txt_Senha.TabIndex = 4;
             // 
             // Btn_OK
             // 
@@ -108,9 +109,9 @@
             this.ClientSize = new System.Drawing.Size(279, 149);
             this.Controls.Add(this.Btn_Cancel);
             this.Controls.Add(this.Btn_OK);
-            this.Controls.Add(this.Txt_Password);
-            this.Controls.Add(this.Lbl_Password);
+            this.Controls.Add(this.Txt_Senha);
             this.Controls.Add(this.Txt_Login);
+            this.Controls.Add(this.Lbl_Password);
             this.Controls.Add(this.Lbl_Login);
             this.Controls.Add(this.Pic_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -127,9 +128,9 @@
 
         private System.Windows.Forms.PictureBox Pic_Login;
         private System.Windows.Forms.Label Lbl_Login;
-        private System.Windows.Forms.TextBox Txt_Login;
         private System.Windows.Forms.Label Lbl_Password;
-        private System.Windows.Forms.TextBox Txt_Password;
+        private System.Windows.Forms.TextBox Txt_Login;
+        private System.Windows.Forms.TextBox Txt_Senha;
         private System.Windows.Forms.Button Btn_OK;
         private System.Windows.Forms.Button Btn_Cancel;
     }

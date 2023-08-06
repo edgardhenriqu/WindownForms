@@ -18,11 +18,7 @@ namespace CursoWindowsForms
 
             Image MyImage = (Image)global::CursoWindowsForms.Properties.Resources.ResourceManager.GetObject(nomeImagem);
             Pic_Imagem.Image = MyImage;
-            Lbl_Questao.Text = mensagem;
-        }
-
-        public Frm_Questao()
-        {
+            Lbl_Questao.Text = mensagem;       
         }
 
         private void Btn_OK_Click(object sender, EventArgs e)

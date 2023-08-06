@@ -9,3 +9,9 @@ C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes 
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.csproj.CoreCompileInputs.cache
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.dll
 C:\Users\edgard\Documents\C# ALURA\05- Windown Forms. Formulários, componentes e eventos\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.pdb
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\bin\Debug\CursoWindowsFormsBiblioteca.dll
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\bin\Debug\CursoWindowsFormsBiblioteca.pdb
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.csproj.AssemblyReference.cache
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.dll
+C:\Users\Edgard\Documents\C# ALURA\06- Windows Forms com C# Menus, outros formulários e validação com login e senha\WindowsForms\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.pdb

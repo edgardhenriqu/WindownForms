@@ -12,6 +12,7 @@ namespace CursoWindowsForms
 {
     public partial class Frm_Login : Form
     {
+
         public string senha;
         public string login;
 
@@ -24,16 +25,19 @@ namespace CursoWindowsForms
             Btn_OK.Text = "OK";
             Btn_Cancel.Text = "Cancel";
 
+
+           
         }
 
         private void Btn_OK_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
 
-            senha = Txt_Password.Text;
+            senha = Txt_Senha.Text;
             login = Txt_Login.Text;
-
+            
             this.Close();
+
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
@@ -43,3 +47,4 @@ namespace CursoWindowsForms
         }
     }
 }
+

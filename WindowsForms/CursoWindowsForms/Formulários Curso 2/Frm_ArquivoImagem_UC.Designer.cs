@@ -81,7 +81,7 @@
             this.Controls.Add(this.Pic_ArquivoImagem);
             this.Controls.Add(this.Lbl_ArquivoImagem);
             this.Name = "Frm_ArquivoImagem_UC";
-            this.Size = new System.Drawing.Size(538, 261);
+            this.Size = new System.Drawing.Size(548, 290);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_ArquivoImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

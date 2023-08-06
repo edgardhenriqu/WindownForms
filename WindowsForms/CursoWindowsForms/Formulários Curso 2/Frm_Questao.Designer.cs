@@ -39,12 +39,12 @@
             // Lbl_Questao
             // 
             this.Lbl_Questao.AutoSize = true;
-            this.Lbl_Questao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Questao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Questao.Location = new System.Drawing.Point(18, 9);
             this.Lbl_Questao.Name = "Lbl_Questao";
-            this.Lbl_Questao.Size = new System.Drawing.Size(207, 20);
+            this.Lbl_Questao.Size = new System.Drawing.Size(229, 20);
             this.Lbl_Questao.TabIndex = 0;
-            this.Lbl_Questao.Text = "Você deseja validar o CPF ?";
+            this.Lbl_Questao.Text = "Você deseja validar o CPF?";
             // 
             // Btn_OK
             // 
@@ -62,17 +62,17 @@
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(115, 23);
             this.Btn_Cancel.TabIndex = 2;
-            this.Btn_Cancel.Text = "Não. Pare";
+            this.Btn_Cancel.Text = "Não Pare";
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // Pic_Imagem
             // 
-            this.Pic_Imagem.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Imagem.Image")));
-            this.Pic_Imagem.Location = new System.Drawing.Point(22, 32);
+            this.Pic_Imagem.Image = global::CursoWindowsForms.Properties.Resources.icons8_question_mark_961;
+            this.Pic_Imagem.Location = new System.Drawing.Point(12, 32);
             this.Pic_Imagem.Name = "Pic_Imagem";
-            this.Pic_Imagem.Size = new System.Drawing.Size(106, 99);
-            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_Imagem.Size = new System.Drawing.Size(129, 107);
+            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Pic_Imagem.TabIndex = 3;
             this.Pic_Imagem.TabStop = false;
             // 
@@ -90,6 +90,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_Questao";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questão";
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Imagem)).EndInit();

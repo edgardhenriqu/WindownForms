@@ -19,6 +19,7 @@ namespace CursoWindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             this.Cursor = Cursors.WaitCursor;
             for (int i=0; i <= 10; i++)
             {
